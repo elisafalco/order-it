@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Order it !</title>
+
+		{% block stylesheets %} 
+		<link rel="stylesheet" href="../static/build/style.css" />
+		{% endblock %}
+	</head>
+	<body>
+		<div class="l-heading">
+			<h1>Welcome to Order It !</h1>
+		</div>
+
+		<div class="l-main">
+			<div class="l-grid" id="js-drop-zone">
+				{% for thumbnail in thumbnails %}
+					<div class="a-picture js-picture" draggable="true" data-file-name="{{ thumbnail }}">
+						{% set path = "static/thumbnails/" ~ thumbnail %}
+						<img src="{{ path }}"></img>
+					</div>
+        {% endfor %}
+      </div>
+		</div>
+
+		<div class="l-footer">
+			<div class="l-footer__input">
+				<label>
+					Préfixe ?
+					<input class="js-prefix" type="text" />
+				</label>
+			</div>
+			<button class="js-submit-button" type="button">Let's go&nbsp;&nbsp;▶️</button>
+		</div>
+
+		<script type="module" src="../static/scripts/index.js"></script
+	</body>
+</html>

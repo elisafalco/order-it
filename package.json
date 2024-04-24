@@ -1,0 +1,22 @@
+{
+  "name": "order-it",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "sass --watch style/index.scss:static/build/style.css",
+    "start": "node ./app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "image-thumbnail": "^1.0.15",
+    "sass": "^1.75.0",
+    "serve-favicon": "^2.5.0",
+    "stylelint": "^16.3.1",
+    "stylelint-order": "^6.0.4",
+    "twig": "^1.17.1"
+  }
+}
